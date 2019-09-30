@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Receipt";
+}
+
+<h1>StarSubs Receipt</h1>
+<h2>Date: @System.DateTime.Now</h2>
+
+<table style="width:50%">
+    <tr>
+        <th>Type of sub</th>
+        <td>@ViewBag.Sandwich</td>
+    </tr>
+    <tr>
+        <th>Size of sub</th>
+        <td>@ViewBag.Size</td>
+    </tr>
+    <tr>
+        <th>Meal Deal</th>
+        <td>ViewBag.Meal</td>
+    </tr>
+    <tr>
+        <th>Price of sub</th>
+        <td>@ViewBag.SandwichPrice</td>
+    </tr>
+    <tr>
+        <th>Price of Meal Deal</th>
+        <td>@ViewBag.MealPrice</td>
+    </tr>
+</table>
+
+<table style="width:50%">
+    <tr>
+        <th>Cost</th>
+        <td>@ViewBag.Cost</td>
+    </tr>
+    <tr>
+        <th>Tax</th>
+        <td>@ViewBag.Tax</td>
+    </tr>
+    <tr>
+        <th>Total due</th>
+        <td>@ViewBag.TotalCost</td>
+    </tr>
+</table>
+
+<a href="~/Views/Home/Index.cshtml">Place another order</a>
+

@@ -1,0 +1,25 @@
+﻿@model Sheet4.Models.Sandwich
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.Label("Select a sandwich")
+    @Html.Label("Select a size")
+    <br />
+    @Html.ListBoxFor(x => x.SandwichChosen, Model.SandwichTypes)
+    @Html.ListBoxFor(x => x.SizeChosen, Model.SizeTypes)
+    <br />
+    <br />
+    @Html.Label("Select a meal deal")
+    <br />
+    @Html.RadioButtonFor(x => x.MealDealChosen, "None")@Html.Label("None")
+    @Html.RadioButtonFor(x => x.MealDealChosen, "Drink and Chips")@Html.Label("Drink and Chips")
+    @Html.RadioButtonFor(x => x.MealDealChosen, "Drink and Cookies")@Html.Label("Drink and Cookies")
+    <br />
+    <input type="submit" value="submit" />
+}
+
